@@ -2,7 +2,7 @@ const MembersSection = () => {
   const members = [
     {
       name: "Mr. Ranjeet Deepak Chafle",
-      photo: "/images/member-ranjeet.png",
+      photo: "public/ranjeetsir.JPG",
       title: "Director",
       role: "Leadership & Strategic Planning",
       description:
@@ -11,7 +11,7 @@ const MembersSection = () => {
     },
     {
       name: "Dr. Rasika Chafle",
-      photo: "/images/member-rasika.png",
+      photo: "public/rasikamam.JPG",
       title: "Director",
       role: "Academic Leadership & Research",
       description:
@@ -20,7 +20,7 @@ const MembersSection = () => {
     },
     {
       name: "Dr. Vitthal Arajpure",
-      photo: "/images/member-vitthal.png",
+      photo: "public/principalsir.JPG",
       title: "Member Secretary",
       role: "Operations & Administration",
       description:
@@ -29,7 +29,7 @@ const MembersSection = () => {
     },
     {
       name: "Dr. Vivek Parhate",
-      photo: "/images/member-vivek.png",
+      photo: "public/VIce-princial.JPG",
       title: "Mentor",
       role: "Technical Mentorship",
       description:
@@ -38,7 +38,7 @@ const MembersSection = () => {
     },
     {
       name: "Dr. Vijay Nagpurkar",
-      photo: "/images/member-vijay.png",
+      photo: "public/nagpurkarsir.JPG",
       title: "Member",
       role: "Technology Development",
       description:
@@ -46,8 +46,8 @@ const MembersSection = () => {
       expertise: ["Technology Development", "Engineering Innovation", "Product Design"],
     },
     {
-      name: "Mr. Ram Wayzode",
-      photo: "/images/member-ram.png",
+      name: "Mr. Amit Bankar",
+      photo: "public/amitsir.JPG",
       title: "Member",
       role: "Industry Relations",
       description:
@@ -113,7 +113,7 @@ const MembersSection = () => {
             </h4>
             <p style={{ color: "#6c757d", marginBottom: "0" }}>
               Dr. Priti Bhagat, Mr. Pradip Balbudhe, Ms. Priyanka Nanwatkar, Mr. Ajay Nanotkar, Dr. Sangeeta Itankar,
-              Dr. Bhojraj Kale, Dr. Sanjay Mahajan, Dr. Manoj Baseshakar, and Mr. Amit Bankar.
+              Dr. Bhojraj Kale, Dr. Sanjay Mahajan, Dr. Manoj Baseshakar, and Mr. Ram Wayzode.
             </p>
           </div>
         </div>

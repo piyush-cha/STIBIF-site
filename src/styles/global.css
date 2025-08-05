@@ -592,12 +592,12 @@ a {
 }
 
 .member-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 1%;
   object-fit: cover;
-  margin: 0 auto 1.5rem;
-  border: 4px solid var(--orange-primary);
+  /* margin: 0 auto 1.5rem; */
+  border: 1px solid var(--orange-primary);
 }
 
 .member-initials {
