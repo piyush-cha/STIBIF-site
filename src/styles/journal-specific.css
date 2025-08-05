@@ -1,0 +1,48 @@
+/* Journal-specific responsive styles */
+@media (max-width: 768px) {
+  .container .journal-layout {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .journal-sidebar {
+    position: static !important;
+    order: 2;
+  }
+
+  .journal-content {
+    order: 1;
+  }
+
+  .journal-sidebar > div {
+    position: static !important;
+  }
+
+  .scope-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .journal-hero h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .journal-hero h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .journal-content > div {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .journal-sidebar > div {
+    padding: 1.5rem !important;
+  }
+}
