@@ -317,7 +317,7 @@ const Journals = () => {
             ]
           }
         },
-      },
+      },  
     },
   }
 
@@ -337,6 +337,14 @@ const Journals = () => {
 
   const renderContent = () => {
     const section = journalData.sections[activeSection]
+    if (!section) {
+      return (
+        <div>
+          <h2 style={{ color: "#1e3a5f", marginBottom: "2rem" }}>Section not found</h2>
+          <p style={{ color: "#6c757d" }}>The selected section does not exist.</p>
+        </div>
+      )
+    }
 
     switch (activeSection) {
       case "scope":
@@ -491,39 +499,78 @@ const Journals = () => {
               <i className={`bi ${section.icon} icon-orange`}></i>
               {section.title}
             </h2>
-
+            {/* Render each policy section, handling both points and sections arrays */}
             {Object.entries(section.content).map(([key, policy]) => (
               <div key={key} style={{ marginBottom: "3rem" }}>
                 <h3 style={{ color: "#ff6b35", marginBottom: "1rem" }}>
                   <i className="bi bi-gear icon-orange"></i> {policy.title}
                 </h3>
-                <ul style={{ listStyle: "none", padding: 0 }}>
-                  {policy.points.map((point, index) => (
-                    <li
-                      key={index}
-                      style={{
-                        marginBottom: "1rem",
-                        display: "flex",
-                        alignItems: "flex-start",
-                        color: "#6c757d",
-                        fontSize: "0.9rem",
-                        lineHeight: "1.6",
-                      }}
-                    >
-                      <i
-                        className="bi bi-dot"
-                        style={{
-                          color: "#ff6b35",
-                          marginRight: "0.5rem",
-                          marginTop: "0.25rem",
-                          flexShrink: 0,
-                          fontSize: "1.2rem",
-                        }}
-                      ></i>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+                {/* If policy.sections exists, render each section with its title and points */}
+                {policy.sections ? (
+                  policy.sections.map((subSection, idx) => (
+                    <div key={idx} style={{ marginBottom: "1.5rem" }}>
+                      <h4 style={{ color: "#1e3a5f", marginBottom: "0.75rem", fontSize: "1rem" }}>{subSection.title}</h4>
+                      {subSection.points && (
+                        <ul style={{ listStyle: "none", padding: 0 }}>
+                          {subSection.points.map((point, index) => (
+                            <li
+                              key={index}
+                              style={{
+                                marginBottom: "1rem",
+                                display: "flex",
+                                alignItems: "flex-start",
+                                color: "#6c757d",
+                                fontSize: "0.9rem",
+                                lineHeight: "1.6",
+                              }}
+                            >
+                              <i
+                                className="bi bi-dot"
+                                style={{
+                                  color: "#ff6b35",
+                                  marginRight: "0.5rem",
+                                  marginTop: "0.25rem",
+                                  flexShrink: 0,
+                                  fontSize: "1.2rem",
+                                }}
+                              ></i>
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <ul style={{ listStyle: "none", padding: 0 }}>
+                    {policy.points &&
+                      policy.points.map((point, index) => (
+                        <li
+                          key={index}
+                          style={{
+                            marginBottom: "1rem",
+                            display: "flex",
+                            alignItems: "flex-start",
+                            color: "#6c757d",
+                            fontSize: "0.9rem",
+                            lineHeight: "1.6",
+                          }}
+                        >
+                          <i
+                            className="bi bi-dot"
+                            style={{
+                              color: "#ff6b35",
+                              marginRight: "0.5rem",
+                              marginTop: "0.25rem",
+                              flexShrink: 0,
+                              fontSize: "1.2rem",
+                            }}
+                          ></i>
+                          {point}
+                        </li>
+                      ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

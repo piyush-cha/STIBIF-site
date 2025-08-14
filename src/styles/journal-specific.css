@@ -12,6 +12,7 @@
 
   .journal-content {
     order: 1;
+    text-align: center;
   }
 
   .journal-sidebar > div {
@@ -44,5 +45,28 @@
 
   .journal-sidebar > div {
     padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .journal-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .journal-hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .journal-content {
+    padding: 1.5rem;
+  }
+
+  .journal-sidebar > div {
+    padding: 1rem;
+  }
+
+  .journal-sidebar button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
   }
 }
